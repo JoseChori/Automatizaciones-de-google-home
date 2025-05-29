@@ -1,0 +1,48 @@
+# ------------------------------------------------------------------------------------------ #
+# Apagado y encendido de luces u otros dispositivos dependiedndo si es de dia o de noche
+# se mostrara como lograrlo con un ejemplo
+# este al ser el primer ejemplo, estara lleno de descripciones por cada accion
+# ------------------------------------------------------------------------------------------ #
+
+
+metadata: #el metadata se establecen el nombre (name) y la descripcion (description) para que google home la lea
+  name: Apagado Y encendido # establecer el nombre de la automatizacion
+  description: estado de dispositivos inteligentes segun si es de dia o de noche # establcer la descripcion 
+
+
+automations: # aqui se establecen todos los activadores y acciones necesarias
+  
+  starters: #los activadores o starters son los que se encargan se de iniciar la automatizacion, por ejemplo si una luz se apaga, esta inicia las acciones
+    - type: time.schedule # aqui establecemos que dependiendo de la hora o si esta amaneciendo o anochesiendo, este active la automatizacion
+      at: sunset # en caso de una hora en especifico se debe establecer en formato HH:MM por ejemplo: 20:00, si se desea usar si es de noche, usar sunset
+      weekdays: # se puede establecer que dias de la semana se repite esta accion (es opcioonal)
+        - MON
+        - TUE
+        - WED
+        - THU
+        - FRI
+        - SAT
+        - SUN
+  actions: #aqui se estblecen las acciones de nuestra automatizacion, empezaremos con el encendido de las luces
+    - type: device.command.OnOff #se establece la accion, en este caso apagado o encendido
+      on: true # se establece si se deja encendido o apagado (true o false) en este caso se encienden
+      devices: # se establecen los dispositivos que queremos que realicen la accion
+        - Dormitorio Jose Lights - Dormitorio Jose
+        - luz afuera - Puerta principal
+        - Entrada Lights - Entrada
+        - Living Lights - Living
+    - type: device.command.BrightnessAbsolute #estableceremos el nivel de luz que queremos, esto va del 1 al 100  
+      brightness: 50
+      devices:
+        - Dormitorio Jose Lights - Dormitorio Jose
+        - luz afuera - Puerta principal
+        - Entrada Lights - Entrada
+        - Living Lights - Living  
+    - type: device.command.ColorAbsolute #establecemos la temperatura de la luz, aqui estableceremos una luz calida, en caso de ser un colo "normal", en la seccion color simplemente al lado sepone el nombre del color
+      color: 
+        temperature: 3000K
+      devices:
+        - Dormitorio Jose Lights - Dormitorio Jose
+        - luz afuera - Puerta principal
+        - Entrada Lights - Entrada
+        - Living Lights - Living
