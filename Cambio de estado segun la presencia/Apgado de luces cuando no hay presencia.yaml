@@ -1,0 +1,25 @@
+# ------------------------------------------------------------------------------------------ #
+# Nos centraremos en que dispositivos actuen segun nuestra presencia
+# Google home puede detectar si hay presencia con el GPS de nuestro dispositivo movil
+# Tambien lo puede hacer con sensores de movimientos o con los dispositivos nest
+# ------------------------------------------------------------------------------------------ #
+ 
+ metadata: 
+   name: Luces apagadas cuando no hay gente
+   description: Apagado de luces cuando no exista presencia en el hogar
+   # En esta seccion establecemos que al momento que no haya nadie en la casa, se ejecute una accion
+ automations:  
+   starters: 
+     - type: home.state.HomePresence  
+       state: HomePresenceMode                    
+       is: AWAY # Aqui se utiliza "AWAY" para cuando o haya nadie, y si queremos que ejecue la accion cuando haya gente, se usa "HOME"
+
+   actions: 
+     - type: device.command.OnOff
+       on: false
+       devices:
+         - <Dispositivo 1>
+         - <Dispositivo 2>
+         - <Dispositivo 3>
+
+    
