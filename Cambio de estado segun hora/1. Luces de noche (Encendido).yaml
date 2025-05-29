@@ -38,7 +38,7 @@ automations: # aqui se establecen todos los activadores y acciones necesarias
         - <dispositivo 3>
     - type: device.command.ColorAbsolute #establecemos la temperatura de la luz, aqui estableceremos una luz calida, en caso de ser un colo "normal", en la seccion color simplemente al lado sepone el nombre del color
       color: 
-        temperature: 3000
+        temperature: 3000K
       devices:
         - <dispositivo 1>
         - <dispositivo 2>
