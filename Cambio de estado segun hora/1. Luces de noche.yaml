@@ -6,7 +6,7 @@
 
 
 metadata: #el metadata se establecen el nombre (name) y la descripcion (description) para que google home la lea
-  name: Encendido al amanecer # establecer el nombre de la automatizacion
+  name: Luces de noche # establecer el nombre de la automatizacion
   description: estado de dispositivos inteligentes segun si es de dia o de noche # establcer la descripcion 
 
 
