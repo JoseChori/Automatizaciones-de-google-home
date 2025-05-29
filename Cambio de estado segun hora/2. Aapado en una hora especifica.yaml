@@ -14,14 +14,6 @@ automations:
   starters: 
     - type: time.schedule 
       at: 00:00 # en caso de una hora en especifico se debe establecer en formato HH:MM por ejemplo: 20:00
-      weekdays: 
-        - MON
-        - TUE
-        - WED
-        - THU
-        - FRI
-        - SAT
-        - SUN
   actions: 
     - type: device.command.OnOff #se establece la accion, en este caso apagado o encendido
       on: false # se establece si se deja encendido o apagado (true o false) 
