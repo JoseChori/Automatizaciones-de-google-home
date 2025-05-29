@@ -30,13 +30,13 @@ automations: # aqui se establecen todos los activadores y acciones necesarias
         - <dispositivo 1>
         - <dispositivo 2>
         - <dispositivo 3>
-    - type: device.command.BrightnessAbsolute #estableceremos el nivel de luz que queremos, esto va del 1 al 100  
+    - type: device.command.BrightnessAbsolute #estableceremos el nivel de luz que queremos, esto va del 1 al 100 (opcional)
       brightness: 50
       devices:
         - <dispositivo 1>
         - <dispositivo 2>
         - <dispositivo 3>
-    - type: device.command.ColorAbsolute #establecemos la temperatura de la luz, aqui estableceremos una luz calida, en caso de ser un colo "normal", en la seccion color simplemente al lado sepone el nombre del color
+    - type: device.command.ColorAbsolute #establecemos la temperatura de la luz, aqui estableceremos una luz calida, en caso de ser un colo "normal", en la seccion color simplemente al lado sepone el nombre del color (opcional)
       color: 
         temperature: 3000K
       devices:
