@@ -15,7 +15,7 @@ automations: # aqui se establecen todos los activadores y acciones necesarias
   starters: #los activadores o starters son los que se encargan se de iniciar la automatizacion, por ejemplo si una luz se apaga, esta inicia las acciones
     - type: time.schedule # aqui establecemos que dependiendo de la hora o si esta amaneciendo o anochesiendo, este active la automatizacion
       at: sunset # en caso de una hora en especifico se debe establecer en formato HH:MM por ejemplo: 20:00, si se desea usar si es de noche, usar sunset
-      weekdays: # se puede establecer que dias de la semana se repite esta accion (es opcioonal)
+      weekdays: # se puede establecer que dias de la semana se repite esta accion (es opcional)
         - MON
         - TUE
         - WED
