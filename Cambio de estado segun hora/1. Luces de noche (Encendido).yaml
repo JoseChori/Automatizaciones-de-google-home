@@ -26,7 +26,7 @@ automations: # aqui se establecen todos los activadores y acciones necesarias
   actions: #aqui se estblecen las acciones de nuestra automatizacion, empezaremos con el encendido de las luces
     - type: device.command.OnOff #se establece la accion, en este caso apagado o encendido
       on: true # se establece si se deja encendido o apagado (true o false) en este caso se encienden
-      devices: # se establecen los dispositivos que queremos que realicen la accion
+      devices: # se establecen los dispositivos que queremos que realicen dicha accion
         - <dispositivo 1>
         - <dispositivo 2>
         - <dispositivo 3>
@@ -38,7 +38,7 @@ automations: # aqui se establecen todos los activadores y acciones necesarias
         - <dispositivo 3>
     - type: device.command.ColorAbsolute #establecemos la temperatura de la luz, aqui estableceremos una luz calida, en caso de ser un colo "normal", en la seccion color simplemente al lado sepone el nombre del color
       color: 
-        temperature: 3000K
+        temperature: 3000
       devices:
         - <dispositivo 1>
         - <dispositivo 2>
