@@ -1,19 +1,19 @@
 # ------------------------------------------------------------------------------------------ #
-# Apagado y encendido de luces u otros dispositivos dependiedndo de la hora
+# Apagado y encendido de luces u otros dispositivos al amanecer
 # se mostrara como lograrlo con un ejemplo
 # ------------------------------------------------------------------------------------------ #
 
 
 metadata: 
-  name: Apagado en hora especifica
-  description: estado de dispositivos inteligentes segun la hora
+  name: Apagado al amanecer
+  description: estado de dispositivos inteligentes segun si es de dia o de noche 
 
 
 automations: 
   
   starters: 
     - type: time.schedule 
-      at: 00:00 # en caso de una hora en especifico se debe establecer en formato HH:MM por ejemplo: 20:00
+      at: sunrise # en caso de una hora en especifico se debe establecer en formato HH:MM por ejemplo: 20:00, en este caso nos interesa que las luces se apaguen al amanecer
       weekdays: 
         - MON
         - TUE
