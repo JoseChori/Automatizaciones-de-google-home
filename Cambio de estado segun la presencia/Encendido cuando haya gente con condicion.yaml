@@ -14,8 +14,8 @@ automations:
     is: HOME
   condition:
     type: time.between                 # esta condicion establece que entre el atardecer y el amanecer se ejecute esta automatizacion
-    before: sunset
-    after: sunrise
+    before: sunrise
+    after: sunset
   actions:
     - type: device.command.OnOff 
       on: true
