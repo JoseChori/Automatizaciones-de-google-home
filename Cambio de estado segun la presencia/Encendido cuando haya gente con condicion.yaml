@@ -1,0 +1,38 @@
+# ------------------------------------------------------------------------------------------ #
+# en este script nos centraremos en que se enciendan las luces cuando haya gente
+# ademas probaremos algo nuevo, aplicar condiciones
+# la condicion que vamos a aplicar es que esto funcione solamente al atardecer
+# ------------------------------------------------------------------------------------------ #
+metadata:
+  name: Encendido con presencia
+  description: al detectar presencia, se ejecutara el encendido de luces al detectarpresencia
+
+automations:
+  starters:
+    type: home.state.HomePresence
+    state: homePresenceMode            # aqui simplemente establecemos que al detectar presencia se enciendan las luces
+    is: HOME
+  condition:
+    type: time.between                 # esta condicion establece que entre el atardecer y el amanecer se ejecute esta automatizacion
+    before: sunset
+    after: sunrise
+  actions:
+    - type: device.command.OnOff 
+      on: true
+      devices:
+        - <Dispositvo 1>
+        - <Dispositvo 2>
+        - <Dispositvo 3>
+    - type: device.command.BrightnessAbsolute 
+      brightness: 50
+      devices:
+        - <Dispositvo 1>
+        - <Dispositvo 2>
+        - <Dispositvo 3>       
+    - type: device.command.ColorAbsolute 
+      color:
+        temperature: 3000K 
+      devices:
+        - <Dispositvo 1>
+        - <Dispositvo 2>
+        - <Dispositvo 3>
